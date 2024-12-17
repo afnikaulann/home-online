@@ -201,6 +201,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    flex-wrap: wrap; /* Memungkinkan elemen untuk berpindah ke baris berikutnya */
 }
 
 /* Bagian Kiri */
@@ -370,25 +371,44 @@ body {
 
 /* Media Query untuk layar kecil */
 /* Responsif untuk tablet (max-width: 768px) */
+/* Media Query untuk perangkat mobile dan tablet */
 @media (max-width: 768px) {
     body {
         font-size: 16px;
     }
-    /* Untuk perangkat dengan lebar layar maksimum 768px (tablet/HP) */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Menyesuaikan ukuran font untuk perangkat lebih kecil */
+
+    .requirements-container {
+        flex-direction: column; /* Menyusun elemen secara vertikal */
+        align-items: center; /* Mengatur agar elemen berada di tengah */
+    }
+
+    .whatsapp-button {
+        font-size: 18px; /* Menyesuaikan ukuran font pada tombol */
     }
 }
 
-/* Untuk perangkat dengan lebar layar maksimum 480px (HP kecil) */
 @media (max-width: 480px) {
     body {
-        font-size: 14px; /* Menyesuaikan ukuran font untuk perangkat lebih kecil */
+        font-size: 14px;
+    }
+
+    .whatsapp-button {
+        font-size: 16px; /* Menyesuaikan ukuran font pada tombol untuk layar sangat kecil */
     }
 }
+.whatsapp-button {
+    font-size: 16px; /* Ukuran font lebih kecil pada layar kecil */
+    padding: 8px 15px; /* Padding tombol yang lebih kecil pada perangkat mobile */
 }
-.tombol-bergabung {
+
+/* Menyembunyikan tombol atau elemen yang tidak relevan pada ukuran layar tertentu */
+@media (max-width: 480px) {
+    .hero-image img {
+        height: 250px; /* Menyesuaikan ukuran gambar */
+    }
+}
+.tombol-berga
+bung {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
@@ -404,13 +424,7 @@ body {
 .tombol-bergabung:hover {
     background-color: #2e2a72;
     color: #fff;
-}
 
-/* Media Query untuk layar kecil */
-@media (max-width: 768px) {
-    .proses-container {
-        flex-direction: column;
-    }
 }
 /* Font Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Arial:wght@700&display=swap');
