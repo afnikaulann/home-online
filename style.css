@@ -371,44 +371,18 @@ body {
 
 /* Media Query untuk layar kecil */
 /* Responsif untuk tablet (max-width: 768px) */
-/* Media Query untuk perangkat mobile dan tablet */
 @media (max-width: 768px) {
     body {
         font-size: 16px;
     }
-
-    .requirements-container {
-        flex-direction: column; /* Menyusun elemen secara vertikal */
-        align-items: center; /* Mengatur agar elemen berada di tengah */
-    }
-
-    .whatsapp-button {
-        font-size: 18px; /* Menyesuaikan ukuran font pada tombol */
-    }
-}
-
-@media (max-width: 480px) {
+    /* Untuk perangkat dengan lebar layar maksimum 768px (tablet/HP) */
+@media (max-width: 768px) {
     body {
-        font-size: 14px;
+        font-size: 16px; /* Menyesuaikan ukuran font untuk perangkat lebih kecil */
     }
 
-    .whatsapp-button {
-        font-size: 16px; /* Menyesuaikan ukuran font pada tombol untuk layar sangat kecil */
-    }
 }
-.whatsapp-button {
-    font-size: 16px; /* Ukuran font lebih kecil pada layar kecil */
-    padding: 8px 15px; /* Padding tombol yang lebih kecil pada perangkat mobile */
-}
-
-/* Menyembunyikan tombol atau elemen yang tidak relevan pada ukuran layar tertentu */
-@media (max-width: 480px) {
-    .hero-image img {
-        height: 250px; /* Menyesuaikan ukuran gambar */
-    }
-}
-.tombol-berga
-bung {
+.tombol-bergabung {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
@@ -424,6 +398,7 @@ bung {
 .tombol-bergabung:hover {
     background-color: #2e2a72;
     color: #fff;
+}
 
 }
 /* Font Import Google Fonts */
