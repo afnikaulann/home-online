@@ -134,23 +134,42 @@ body {
     height: 100%; /* Menyesuaikan gambar agar pas dalam elemen */
     object-fit: cover; /* Menjaga rasio gambar dan memotong bagian yang tidak pas */
 }
+/* Animasi Bounce dengan Rotasi */
+@keyframes bounceWithRotation {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg); /* Posisi awal dan akhir */
+    }
+    50% {
+        transform: translateY(-15px) rotate(10deg); /* Posisi di tengah animasi */
+    }
+}
+
+/* Mengaplikasikan animasi pada ikon WhatsApp */
+.floating-wa img {
+    animation: bounceWithRotation 1s ease-in-out infinite; /* Menggunakan animasi bounce dengan rotasi */
+}
+
 
 /* Tombol WhatsApp di pojok kanan bawah */
 .floating-wa {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 40px; /* Ukuran ikon */
+    height: 40px; /* Ukuran ikon */
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: none; /* Hilangkan bayangan */
     z-index: 1000;
-    transition: transform 0.3s ease-in-out;
 }
+
+.floating-wa img {
+    width: 200%; /* Pastikan gambar mengisi seluruh kontainer */
+    height: 200%; /* Pastikan gambar mengisi seluruh kontainer */
+    border-radius: 0; /* Menghilangkan efek bulat pada gambar */
+}
+
 
 .floating-wa:hover {
     transform: scale(1.1);
@@ -355,6 +374,19 @@ body {
     .proses-container {
         flex-direction: column;
     }
+    /* Untuk perangkat dengan lebar layar maksimum 768px (tablet/HP) */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Menyesuaikan ukuran font untuk perangkat lebih kecil */
+    }
+}
+
+/* Untuk perangkat dengan lebar layar maksimum 480px (HP kecil) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Menyesuaikan ukuran font untuk perangkat lebih kecil */
+    }
+}
 }
 .tombol-bergabung {
     display: inline-block;
