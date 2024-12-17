@@ -369,10 +369,9 @@ body {
 }
 
 /* Media Query untuk layar kecil */
-/* Responsif untuk tablet (max-width: 768px) */
 @media (max-width: 768px) {
-    body {
-        font-size: 16px;
+    .proses-container {
+        flex-direction: column;
     }
     /* Untuk perangkat dengan lebar layar maksimum 768px (tablet/HP) */
 @media (max-width: 768px) {
