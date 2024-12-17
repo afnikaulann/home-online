@@ -9,6 +9,10 @@
 body {
     background-color: #f8f9fa;
 }
+.logo {
+    width: 450px; /* Atur lebar gambar sesuai keinginan */
+    height: auto; /* Menjaga rasio aspek gambar agar tetap proporsional */
+}
 
 .header {
     background-color: #3C1C7C;
@@ -70,19 +74,21 @@ body {
     color: white; /* Warna teks */
     border: none; /* Hilangkan border */
     padding: 8px 20px; /* Padding sedang untuk tombol */
-    font-size: 14px; /* Ukuran teks sedang */
+    font-size: 20px; /* Ukuran teks sedang */
     border-radius: 10px; /* Bentuk lonjong yang sederhana */
     cursor: pointer; /* Kursor saat diarahkan */
-    display: flex; /* Mengatur ikon dan teks dalam satu baris */
-    align-items: center; /* Tengah vertikal */
-    justify-content: center; /* Tengah horizontal */
+    display: inline-flex; /* Gunakan inline-flex untuk membuat elemen baris */
+    align-items: center; /* Rata tengah vertikal */
+    justify-content: center; /* Rata tengah horizontal */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); /* Bayangan lebih kecil */
     transition: all 0.3s ease; /* Efek transisi */
 }
 
 .whatsapp-button img {
-    width: 10px; /* Ukuran ikon WhatsApp lebih besar */
-    margin-right: 1px; /* Jarak antara ikon dan teks */
+    width: 40px; /* Ukuran ikon WhatsApp lebih besar */
+    height: auto; /* Menjaga proporsi ikon */
+    margin-right: 10px; /* Jarak antara ikon dan teks */
+    vertical-align: middle; /* Menjaga ikon sejajar dengan teks */
 }
 
 .whatsapp-button:hover {
@@ -91,7 +97,7 @@ body {
 }
 
 .image-content img {
-    max-width: 300px;
+    max-width: 400px;
     border-radius: 5px;
 }
 
@@ -115,15 +121,29 @@ body {
     text-align: center;
 
 }
+.requirements-right .item .icon {
+    width: 50px; /* Ukuran gambar */
+    height: 50px; /* Ukuran gambar */
+    display: flex;
+    justify-content: center; /* Menyusun gambar di tengah */
+    align-items: center; /* Menyusun gambar di tengah */
+}
+
+.requirements-right .item .icon img {
+    width: 100%; /* Menyesuaikan gambar agar pas dalam elemen */
+    height: 100%; /* Menyesuaikan gambar agar pas dalam elemen */
+    object-fit: cover; /* Menjaga rasio gambar dan memotong bagian yang tidak pas */
+}
+
 /* Tombol WhatsApp di pojok kanan bawah */
 .floating-wa {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #25D366;
+    background-color: #ffffff;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,7 +231,6 @@ body {
 .icon {
     width: 60px;
     height: 60px;
-    background-color: #FF3E7F;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -373,28 +392,26 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background-color: #f44336; /* Latar belakang merah */
-    color: #ffffff; /* Warna teks putih */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px;
-    font-family: Arial, sans-serif; /* Font */
+    margin: 0; /* Hilangkan margin */
+    padding: 0; /* Hilangkan padding */
+    width: 100%; /* Lebar penuh */
+    height: auto; /* Sesuai dengan ukuran gambar */
+    display: block; /* Agar tidak ada elemen lain mengganggu */
 }
 
-.hero-content {
-    max-width: 50%;
+.hero-section img {
+    width: 100%; /* Lebar penuh layar */
+    height: auto; /* Menjaga rasio aspek gambar */
+    display: block; /* Hilangkan ruang bawah gambar */
+    object-fit: contain; /* Menyesuaikan gambar tanpa terpotong */
 }
 
-.hero-title {
-    font-size: 60px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
 
-.hero-subtitle {
-    font-size: 28px;
-    font-weight: bold;
+.hero-full-image {
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    object-fit: cover; /* Gambar menyesuaikan area tanpa distorsi */
+    display: block; /* Hilangkan ruang ekstra di bawah gambar */
 }
 
 /* Gambar */
