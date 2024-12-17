@@ -297,11 +297,10 @@ body {
     margin-right: 10px;
 }
 
-/* Responsif */
+/* Responsif untuk tablet (max-width: 768px) */
 @media (max-width: 768px) {
-    .requirements-container {
-        flex-direction: column;
-        text-align: center;
+    body {
+        font-size: 16px;
     }
 
     .working-image {
@@ -370,9 +369,10 @@ body {
 }
 
 /* Media Query untuk layar kecil */
+/* Responsif untuk tablet (max-width: 768px) */
 @media (max-width: 768px) {
-    .proses-container {
-        flex-direction: column;
+    body {
+        font-size: 16px;
     }
     /* Untuk perangkat dengan lebar layar maksimum 768px (tablet/HP) */
 @media (max-width: 768px) {
