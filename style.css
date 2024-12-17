@@ -201,7 +201,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    flex-wrap: wrap; /* Memungkinkan elemen untuk berpindah ke baris berikutnya */
 }
 
 /* Bagian Kiri */
@@ -380,7 +379,14 @@ body {
     body {
         font-size: 16px; /* Menyesuaikan ukuran font untuk perangkat lebih kecil */
     }
+}
 
+/* Untuk perangkat dengan lebar layar maksimum 480px (HP kecil) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Menyesuaikan ukuran font untuk perangkat lebih kecil */
+    }
+}
 }
 .tombol-bergabung {
     display: inline-block;
@@ -400,6 +406,11 @@ body {
     color: #fff;
 }
 
+/* Media Query untuk layar kecil */
+@media (max-width: 768px) {
+    .proses-container {
+        flex-direction: column;
+    }
 }
 /* Font Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Arial:wght@700&display=swap');
